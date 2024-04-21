@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ホーム</title>
+</head>
+<body>
+    <h1>プロジェクトとイベント</h1>
+    {% for project in projects %}
+        <h2><a href="{% url 'project_detail' project.id %}">{{ project.title }}</a></h2>
+        <p>{{ project.description|truncatewords:30 }}</p>
+    {% endfor %}
+</body>
+</html>
