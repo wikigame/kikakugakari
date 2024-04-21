@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>メンバー</title>
+</head>
+<body>
+    <h1>メンバー</h1>
+    {% for member in members %}
+        <h2>{{ member.name }}</h2>
+        <p>役割: {{ member.role }}</p>
+        <p>連絡先: {{ member.contact_info }}</p>
+    {% endfor %}
+</body>
+</html>
